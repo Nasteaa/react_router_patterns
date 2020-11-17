@@ -13,10 +13,10 @@ function App(props) {
     <BrowserRouter>
       <Switch>
         <Route exact path="/dogs" >
-          <DogList dogPics={props.dogs.map(dog => dog)} />
+          <DogList dogs={props.dogs.map(dog => dog)} />
         </Route>
         <Route path="/dogs/:name" >
-          <DogDetails /> {/*what props will this need?*/}
+          <DogDetails dogs={props.dogs}/> {/*what props will this need?*/}
         </Route>
         <Redirect to="/dogs" />
       </Switch>
