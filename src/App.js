@@ -7,6 +7,7 @@ import perry from './perry.jpg';
 import tubby from './tubby.jpg';
 import whiskey from './whiskey.jpg';
 import duke from './duke.jpg';
+import june from './june.jpeg';
 
 function App(props) {
   return (
@@ -54,6 +55,16 @@ App.defaultProps = {
         "Perry loves all humans.",
         "Perry demolishes all snacks.",
         "Perry hates the rain."
+      ]
+    },
+    {
+      name: "June",
+      age: 3,
+      src: june,
+      facts: [
+        "June loves trucking other dogs at the park.",
+        "June gets anxious when mommas and papas are gone.",
+        "June enjoys eating horse poop."
       ]
     },
     {

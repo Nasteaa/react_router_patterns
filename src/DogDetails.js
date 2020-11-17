@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
+import "./DogDetails.css"
 
 function DogDetails({dogs}) {
   const { name } = useParams();
@@ -8,7 +9,7 @@ function DogDetails({dogs}) {
   
 
   let specificDog = dogs.find(dog => dog.name === name)
-  let facts = specificDog.facts.map((fact, idx) => <li key={idx}>{fact}</li>);
+  let facts = specificDog.facts.map((fact, idx) => <li key={idx}><b>{fact}</b></li>);
 
   return (
     <div>
