@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-// import axios from "axios";
+import { useParams, Link } from "react-router-dom";
 
-const GIPHY_URL = "http://api.giphy.com/v1";
-function DogList() {
+
+
+function DogList({dogPics}) {
   const { name } = useParams();
-  const [src, setSrc] = useState(null);
+  // const [src, setSrc] = useState(null);
 
   // useEffect(function loadGiphyImgToSrc() {
   //   async function fetchGif(searchTerm) {
@@ -16,11 +16,12 @@ function DogList() {
   //   }
   //   fetchGif(name);
   // }, [name]);
-
-  let img = src ? <img src={src} alt={name} /> : null;
+  
+  console.log(dogPics)
+let img = dogPics.map(dog =>  <h3> <Link to={dog}> {dog.name}</Link></h3> );
   return (
     <div>
-      <h1>Here's a pic of {name}.</h1>
+      <h1>Here's a pic of {name}</h1>
       {img}
     </div>
   );
